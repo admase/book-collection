@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--/ Meta Tags (Required) /-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!--/ App Title /-->
+    <title>Book Collection</title>
+
+    <!--/ Vendors /-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!--/ Custom Stylesheet /-->
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <!--/ Wrapper /-->
+    <div class="wrapper">
+
+        <div class="masthead">
+            <h1 class=""><i class="fas fa-book-open fa-fw text-red"></i> Book Collection</h1>
+        </div>
+
+        <div class="container">
+            <div class="form-container mb-5">
+                <div class="row">
+                    <div class="col-12 mx-auto col-md-3 mt-3 p-2 bg-white rounded form-wrap">
+                        <h3 class="form-title text-center">Add New Book</h3>
+                        <hr />
+
+                        <!--/ Form /-->
+                        <form id="bookForm" class="form">
+                            <div class="mb-2">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" id="title" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label for="author" class="form-label">Author</label>
+                                <input type="text" id="author" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <label for="pages" class="form-label">Number of Pages</label>
+                                <input type="number" id="pages" class="form-control">
+                            </div>
+                            <div class="mb-2">
+                                <input type="checkbox" id="read" class="form-input-check">
+                                <label for="read" class="form-label">Have you read it?</label>
+                            </div>
+                            <div class="mb-2 d-grid">
+                                <input type="submit" id="addBookBtn" class="btn btn-sm btn-form" value="Add Book">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive table-responsive-md container table-container">
+
+                <!--/ Table /-->
+                <table class="table text-center table-borderless table-md table-hover align-middle">
+                    <thead class="bg-secondary">
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Number of Pages</th>
+                            <th scope="col">Has read it?</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="collection"></tbody>
+                </table>
+            </div>
+
+            <!--/ Add Book Icon /-->
+            <div class="icon-box text-center">
+                <i class="fas fa-circle-plus fa-fw" id="showForm" title="Add New Book"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--/ Footer /-->
+    <div class="footer text-center">
+        <small>Copyright &copy;2023 <a href="index.html" target="_parent" rel="noopener noreferrer">Book Collection</a>
+            &middot; All Rights Reserved</small>
+    </div>
+
+    <!--/ Script Tags /-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--/ Custom JavaScript /-->
+    <script src="./main.js" defer></script>
+    
+</body>
+
+</html>
